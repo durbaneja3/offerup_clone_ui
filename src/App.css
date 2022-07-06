@@ -1,38 +1,215 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  box-sizing: border-box;
+  max-width: 60%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  height: 20vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #05a77e;
+  padding: 1rem;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title h1 {
+  font-weight: 800;
+  letter-spacing: -1px;
+  font-size: 32px;
+}
+.title input {
+  width: 500px;
+  margin: 0rem 0.5rem;
+  padding: 0.6rem 0rem;
+  padding-left: 1rem;
+  border-radius: 20px;
+  border: 1px solid #05a77e;
+}
+
+.title input::placeholder {
+  position: absolute;
+  display: flex;
+  left: 10px;
+  color: #05a77e;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.title h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.links ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  color: #303030;
+}
+
+.links li {
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+.categories ul {
+  font-size: 0.9rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 1rem;
+}
+
+.ad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  color: #05a77e;
+}
+
+.ad h2 {
+  font-weight: 500;
+}
+
+.ad button {
+  color: #fff;
+  background-color: #05a77e;
+  border: 1px solid #05a77e;
+  border-radius: 20px;
+  padding: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.listing-wrapper {
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.listing-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0rem 1rem;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.listing-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.listing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listing-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.listing-info h3 {
+  padding: 0.5rem;
+}
+
+.listing-info button {
+  color: #fff;
+  background-color: #05a77e;
+  border: 1px solid #05a77e;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  body {
+    max-width: 100vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar {
+    padding: 0.2rem 1rem;
+  }
+
+  .title {
+    width: 100vw;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 1rem;
+  }
+
+  .title h1 {
+    font-size: 24px;
+    padding: 0.4rem 0rem;
+  }
+  .title input {
+    margin: 0;
+    width: 100%;
+  }
+
+  .title h2 {
+    padding: 0.9rem 1rem;
+  }
+
+  .categories ul {
+    display: none;
+  }
+  .links {
+    display: none;
+  }
+
+  .ad {
+    margin: 1rem;
+  }
+
+  .ad h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .ad button {
+    font-size: 14px;
+    padding: 0.25rem 0.5rem;
+    font-weight: 600;
   }
 }
